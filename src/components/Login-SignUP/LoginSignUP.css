@@ -1,0 +1,456 @@
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 150px;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* CAPTCHA Container */
+.captcha-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.captcha {
+    padding: 10px;
+    background-color: #3498db;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px;
+    letter-spacing: 3px;
+}
+
+.captcha input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    outline: none;
+    font-size: 16px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.captcha input:focus {
+    border: 1px solid #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Dark Mode CAPTCHA Styling */
+.dark-mode .captcha {
+    background-color: #2ecc71;
+}
+
+.dark-mode .captcha input {
+    background-color: #34495e;
+    color: #ecf0f1;
+    border: 1px solid #7f8c8d;
+}
+
+.dark-mode .captcha input:focus {
+    border: 1px solid #2ecc71;
+    box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+}
+
+
+
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 50px;
+        padding: 15px;
+    }
+}
+
+/* Responsive Button Layout */
+.submit-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+    .submit-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Responsive Header */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    animation: slideInDown 0.6s ease-out;
+}
+
+/* Password Strength Indicator */
+.password-strength {
+    margin-top: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    transition: width 0.3s ease;
+}
+
+.weak {
+    width: 33%;
+    background-color: #e74c3c;
+}
+
+.medium {
+    width: 66%;
+    background-color: #f1c40f;
+}
+
+.strong {
+    width: 100%;
+    background-color: #2ecc71;
+}
+
+
+/* Keyframe for Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.signup-mode {
+    background: #f5f5f5;
+    color: #333;
+}
+
+.login-mode {
+    background: #54b6c3;
+    color: #004d40;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    animation: slideInDown 0.6s ease-out;
+}
+
+/* Keyframe for Slide-In Animation */
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text {
+    color: #34495e;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.underline {
+    width: 80px;
+    height: 5px;
+    background: #3498db;
+    border-radius: 9px;
+    animation: growWidth 0.4s ease-in-out;
+}
+
+/* Keyframe for Underline Growing */
+@keyframes growWidth {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80px;
+    }
+}
+
+.inputs {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.input:hover {
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.input img {
+    margin-right: 15px;
+    width: 24px;
+    height: 24px;
+}
+
+.input input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #34495e;
+    font-size: 18px;
+    font-weight: 500;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+/* Input Focus Styles */
+.input input:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+}
+
+/* Toggle password visibility styling */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #7f8c8d;
+    font-size: 16px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #34495e;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.remember-me input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.forget-password {
+    margin-top: 15px;
+    text-align: right;
+    color: #3498db;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.forget-password:hover {
+    color: #2980b9;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 45px;
+    color: #ffffff;
+    background: #3498db;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Button Active State */
+.submit:active {
+    background-color: #1abc9c;
+    transform: scale(0.98);
+}
+
+.grey {
+    background: #bdc3c7;
+    color: #7f8c8d;
+    cursor: not-allowed;
+}
+
+/* Dark Mode Styling */
+.dark-mode {
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+
+.dark-mode .input {
+    background: #34495e;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .input input {
+    color: #ecf0f1;
+}
+
+/* Input Focus Styles in Dark Mode */
+.dark-mode .input input:focus {
+    box-shadow: 0 0 5px rgba(52, 152, 219, 1);
+    border: 1px solid rgba(52, 152, 219, 1);
+}
+
+.dark-mode .toggle-password {
+    color: #ecf0f1;
+}
+
+.dark-mode .submit {
+    background: #e67e22;
+    color: #ffffff;
+}
+
+.dark-mode .submit:hover {
+    background-color: #d35400;
+}
+
+/* Button Active State in Dark Mode */
+.dark-mode .submit:active {
+    background-color: #16a085;
+}
+
+.dark-mode .forget-password {
+    color: #ecf0f1;
+}
+
+.dark-mode .remember-me label {
+    color: #ecf0f1;
+}
+
+.toggle-dark-mode {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.toggle-dark-mode input {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.toggle-dark-mode label {
+    color: #34495e;
+    cursor: pointer;
+}
+
+.dark-mode .toggle-dark-mode label {
+    color: #ecf0f1;
+}
+
+.dark-mode.signup-mode {
+    background: #1a252f;
+    color: #ecf0f1;
+}
+
+.dark-mode.signup-mode .submit {
+    background: #e74c3c;
+}
+
+.dark-mode.signup-mode .submit:hover {
+    background-color: #c0392b;
+}
+
+.dark-mode.login-mode {
+    background: #233240;
+    color: #ecf0f1;
+}
+
+.dark-mode.login-mode .submit {
+    background: #2980b9;
+}
+
+.dark-mode.login-mode .submit:hover {
+    background-color: #1f639a;
+}
+
+/* Caps Lock Warning */
+.capslock-warning {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.capslock-warning.visible {
+    display: block;
+    opacity: 1;
+}
+
+.dark-mode .capslock-warning {
+    color: #e74c3c;
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.dark-mode .error-message {
+    color: #e74c3c;
+}
+
+/* Hover Effects for Remember Me and Dark Mode Labels */
+.remember-me:hover label,
+.toggle-dark-mode:hover label {
+    color: #2980b9;
+}
+
+.dark-mode .remember-me:hover label,
+.dark-mode .toggle-dark-mode:hover label {
+    color: #3498db;
+}
+
+/* Box Shadow Enhancement for Inputs on Focus */
+.input:focus-within {
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+.dark-mode .input:focus-within {
+    box-shadow: 0 0 10px rgba(41, 128, 185, 0.7);
+}
